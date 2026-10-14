@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — NAHL Labs</title>
+<title>Privacy Policy — ProInfra | NAHL Labs</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;800&display=swap" rel="stylesheet">
 <style>
@@ -22,10 +22,11 @@ h2{color:var(--navy);font-size:21px;margin:36px 0 8px}
 ul{padding-left:22px}
 li{margin-bottom:6px}
 .box{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:20px 0}
-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:15px}
 .tbl{overflow-x:auto}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:15px}
 th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
 th{background:#E7EEF5;color:var(--navy)}
+code{background:#E7EEF5;padding:1px 6px;border-radius:4px;font-size:14px}
 footer{border-top:1px solid var(--line);padding:24px 20px 40px;color:var(--muted);font-size:14px;text-align:center}
 </style>
 </head>
@@ -33,50 +34,68 @@ footer{border-top:1px solid var(--line);padding:24px 20px 40px;color:var(--muted
 <header><div class="bar"><a class="brand" href="./">NAHL <small>LABS</small></a><a href="./">Home</a></div></header>
 <main>
 <h1>Privacy Policy</h1>
-<p class="date">Applies to: ProInfra – Civil 3D Infrastructure Tools Suite and the ProInfra Tool Manager<br>Effective date: October 14, 2026</p>
+<p class="date">ProInfra for Autodesk Civil 3D — published by NAHL Labs<br>Last updated: 14 October 2026</p>
 
-<div class="box"><strong>In short:</strong> ProInfra does not collect, store or sell any personal data. Your drawings and project data never leave your computer. The only network activity is the Tool Manager checking for and downloading updates from Dropbox.</div>
+<div class="box"><strong>Summary:</strong> ProInfra does not collect, store or transmit any personal data. There is no telemetry, no analytics, no usage tracking, no account and no registration. Every command runs locally on your computer and works only on the drawing you have open. The plugin makes exactly one kind of outbound request: it checks for and downloads its own updates, as described below.</div>
 
-<h2>1. Who we are</h2>
-<p>NAHL Labs is the publisher of ProInfra, a plugin suite for Autodesk Civil 3D. Contact: <a href="mailto:els.elsaadany@gmail.com">els.elsaadany@gmail.com</a>.</p>
-
-<h2>2. Data the app collects</h2>
-<p>ProInfra <strong>does not collect personal data</strong>. Specifically, it does not:</p>
+<h2>1. What data we collect</h2>
+<p><strong>None.</strong> We do not collect or receive:</p>
 <ul>
-<li>require an account, login or registration;</li>
-<li>collect names, email addresses or other identifying information;</li>
-<li>include analytics, telemetry, tracking or advertising;</li>
-<li>upload your drawings, models or project files anywhere.</li>
+<li>personal or contact information;</li>
+<li>drawings, designs, project data or any file contents;</li>
+<li>usage statistics, command history, crash reports or diagnostics;</li>
+<li>licence keys, machine identifiers, IP-based profiles or user accounts.</li>
 </ul>
-<p>All ProInfra commands run locally inside Civil 3D on your computer. Settings the tools save (for example window preferences) are stored only on your own computer.</p>
+<p>We operate no server, no database and no logging facility that could receive such data.</p>
 
-<h2>3. Update checks (ProInfra Tool Manager)</h2>
-<p>The ProInfra Tool Manager connects to the internet to see whether a newer version is available and, when you choose to update, to download the new files. These files are hosted on <strong>Dropbox</strong>.</p>
+<h2>2. Internet access: updates only</h2>
+<p>ProInfra includes a built-in updater so you receive fixes and new tools. This is the <em>only</em> feature that reaches the internet.</p>
 <ul>
-<li><strong>What is sent:</strong> a standard web request for the version file and update packages. No personal information, drawing data or usage data is included.</li>
-<li><strong>What Dropbox may receive:</strong> like any web server, Dropbox may automatically log technical details of the request, such as your IP address, the time of the request and basic software information. NAHL Labs does not receive or use this information.</li>
-<li><strong>Purpose:</strong> solely to deliver ProInfra updates.</li>
+<li><strong>What it contacts:</strong> two files hosted on Dropbox — a small manifest listing available tool versions and, only when an update is selected, the update package itself.</li>
+<li><strong>What is sent:</strong> nothing beyond what any web request necessarily contains. The request is an anonymous HTTPS GET for a public file. No identifiers, drawing data or personal information are included.</li>
+<li><strong>When it runs:</strong> when you click <em>Update</em> in the ProInfra ribbon and — if the automatic option is enabled — a background check at most once every seven days when Civil 3D starts.</li>
+<li><strong>How to disable it:</strong> turn off <em>Auto check &amp; update</em> in ProInfra → Settings. The plugin then makes no network requests at all unless you press <em>Update</em> yourself.</li>
 </ul>
+<p>Dropbox serves these files and, like any web host, keeps its own server logs outside our control. We have no access to those logs and receive no reports from them.</p>
 
-<h2>4. Third parties</h2>
+<h2>3. Data stored on your computer</h2>
+<p>ProInfra writes small files inside its own installation folder. They stay on your machine, are never transmitted and are removed when you uninstall the plugin.</p>
 <div class="tbl">
 <table>
-<tr><th>Third party</th><th>When</th><th>Purpose</th><th>Their policy</th></tr>
-<tr><td>Dropbox, Inc.</td><td>Tool Manager update checks and downloads</td><td>Hosting update files</td><td><a href="https://www.dropbox.com/privacy">dropbox.com/privacy</a></td></tr>
-<tr><td>Autodesk, Inc.</td><td>When you obtain ProInfra from the Autodesk Marketplace</td><td>Distribution of the app</td><td><a href="https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement">Autodesk Privacy Statement</a></td></tr>
-<tr><td>GitHub, Inc.</td><td>When you visit this website</td><td>Hosting this website</td><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></td></tr>
+<tr><th>File</th><th>Purpose</th></tr>
+<tr><td><code>settings.json</code></td><td>Your ribbon preferences and whether automatic update checks are enabled</td></tr>
+<tr><td><code>&lt;tool&gt;.ver</code></td><td>The installed version of each tool, so the updater knows what is current</td></tr>
+<tr><td><code>managed.txt</code></td><td>Which tools came from the update package, so tools you added yourself are never touched</td></tr>
+<tr><td><code>autoupdate.txt</code></td><td>The date of the last update check, so it runs no more than weekly</td></tr>
+<tr><td><code>ProInfra_log.txt</code></td><td>Local diagnostic messages to help you troubleshoot; not sent anywhere</td></tr>
 </table>
 </div>
-<p>NAHL Labs does not share, sell or rent any data to anyone.</p>
 
-<h2>5. Email</h2>
-<p>If you contact us by email, we use your message and email address only to reply to you, and we do not share them.</p>
+<h2>4. Your drawings and project data</h2>
+<p>All commands run inside Autodesk Civil 3D on your computer. Drawing contents, model data and project files are read only to perform the command you ran, and are never uploaded, copied or shared.</p>
 
-<h2>6. Changes to this policy</h2>
-<p>If ProInfra's data practices change, this page will be updated before the change is released, and the effective date above will change.</p>
+<h2>5. Third parties</h2>
+<p>We do not use advertising networks, analytics providers or third-party SDKs, and we do not sell, rent or share data, because we hold none.</p>
+<div class="tbl">
+<table>
+<tr><th>Third party</th><th>Role</th><th>Their policy</th></tr>
+<tr><td>Dropbox, Inc.</td><td>Static file hosting for ProInfra update downloads</td><td><a href="https://www.dropbox.com/privacy">dropbox.com/privacy</a></td></tr>
+<tr><td>Autodesk, Inc.</td><td>Distributes ProInfra through the Design and Make Marketplace</td><td><a href="https://www.autodesk.com/company/legal-notices-trademarks/privacy-statement">Autodesk Privacy Statement</a></td></tr>
+<tr><td>GitHub, Inc.</td><td>Hosts this website (not used by the plugin)</td><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a></td></tr>
+</table>
+</div>
 
-<h2>7. Contact</h2>
-<p>Questions about this policy: <a href="mailto:els.elsaadany@gmail.com">els.elsaadany@gmail.com</a></p>
+<h2>6. Children's privacy</h2>
+<p>ProInfra is a professional engineering tool, is not directed at children and collects no data from anyone.</p>
+
+<h2>7. Email</h2>
+<p>If you contact us by email, your message and address are used only to reply to you and are not shared.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>If this policy changes, the revised version will be published at this address with an updated date. Material changes will also be noted in the plugin's release notes.</p>
+
+<h2>9. Contact</h2>
+<p>NAHL Labs — <a href="mailto:els.elsaadany@gmail.com">els.elsaadany@gmail.com</a><br><a href="https://nahl-labs.github.io">https://nahl-labs.github.io</a></p>
 </main>
 <footer>© 2026 NAHL Labs</footer>
 </body>
